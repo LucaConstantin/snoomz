@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo.jpg" />
+    <title id="upt">Snoomz Web || Main</title>   
+  </head>
+  <body id="body" onload="loading()">    
+    
+    <div id="overlay">
+        <div id="loading"></div>
+    </div>
+    
+
+    <div class="container" style="display: none;" id="mainContent">
+        <div class="row clearfix">
+            <div class="col-lg-12">
+                <div class="card chat-app">
+                    <div id="plist" class="people-list">
+                        <div class="input-group">
+                            
+                        
+        
+                            <input type="text" class="form-control" placeholder="Add people/servers"  style="border-radius: 4px;" id="addId">
+                            <span class="input-group-btn">
+                                <button id="addButton" style="background-color:rgb(215, 220, 228); border-color: transparent; border-radius: 15%;" type="submit" class="btn btn-warning btn-sm send-button" id="img">
+                                    <i class="fa fa-plus" style="color: #667175;"></i></button>
+                                    <button onclick="gEdit()" style="background-color:rgb(215, 220, 228); border-color: transparent; border-radius: 15%;" type="submit" class="btn btn-warning btn-sm send-button" id="img">
+                                        <i class="fa fa-users" style="color: #667175;"></i></button>   
+                                    
+                        
+                        <p></p>
+                          </span>
+                          
+                        </div>
+                        
+                        
+
+                        <ul class="list-unstyled chat-list mt-2 mb-0" style="overflow: hidden; display: none;" id="gEdit">
+                        <li id="usrInfo"> 
+                            <div class="about" style=" display: block;">
+                                
+                                <p style="text-align:center;"><strong>Create Group</strong></p>
+                                <p></p>
+                                <p style="text-align:center;"><strong>Edit the group name</strong></p>
+                                <p></p>
+                                <input type="text" class="form-control" id="gName" placeholder="Group name here..." maxlength="11" style="border-radius: 4px;">
+                                <p></p>
+                                <p style="text-align:center;"><strong>Edit the group bio</strong></p>
+                                <p></p>
+                                <input type="text" class="form-control" id="gBio" placeholder="Group bio here..." maxlength="25" style="border-radius: 4px;">
+                                <p></p>
+                                <button class="form-control" id="gPfp" type="button" style="border-radius: 4px;"><i class="fa fa-upload  " style="color: #667175; "></i> Upload Profile Picture</button>
+                                <p></p>
+                                <p style="text-align:center;"><strong>Read this before</strong></p>
+                                <p></p>
+                                
+                                <P><strong>IMPORTANT!</strong>In order to add people,after you create the group you need to get the invitation code which is in the right corner, then give it to your friends.</P>
+                                <p></p>
+
+                                <button class="upper" style="width: 100%;" id="createGroup"><i class="fa fa-plus-square " style="color: #667175; "></i> Create</button>                                       
+                                <p></p>
+                            </div>
+                        </li>
+                    </ul>
+
+                        <ul class="list-unstyled chat-list mt-2 mb-0" style="overflow: hidden;" id="mEdit" >
+                            
+                            
+                            <li id="usrInfo">
+                                
+
+                                <img src="https://eu.ui-avatars.com/api/?name=a" alt="avatar" id="pfp" onclick="" style="width: 45px; height: 45px; border-radius: 50%; object-fit: cover;">
+                                <div class="about" id="view">
+                                    <div class="usrname"><p id="copy" onclick="copyEvent('copy')"><strong>anonymous#0101</strong></p></div>
+                                    <div class="status" id="bioView"> <i class="fa fa-circle online" aria-hidden="true"></i> <small> Hi there!I'm using ChatCom! </small></div>
+                                                                          
+                                </div>
+                                
+                                <li class="clearfix" id="usrInfo" >
+                                    
+                                    <div class="about" style="margin-left: 17px;">
+                                        <p></p>
+                                        <button class="upper" id="signout"><i class="fa fa-sign-out " style="color: #667175;"></i> Sign Out</button><i class="fa fa-arrows-h" style="color: #667175;"></i><button class="upper" id="openId"><i class="fa fa-pencil " style="color: #667175;"></i> Edit </button>
+                                        <p></p>
+                                    </div>
+            
+                                    
+                                    
+                                    <div class="about" id="edit" style=" display: none;">
+                                        <p style="text-align:center;"><strong>Edit Profile</strong></p>
+                                        <p></p>
+                                        <button id="upimg" class="form-control" type="button" style="border-radius: 4px;"><i class="fa fa-upload  " style="color: #667175; "></i> Upload Profile Picture</button>
+                                        <p></p>
+                                        <input type="text" class="form-control" id="bio" placeholder="Your bio here..." maxlength="25" style="border-radius: 4px;">
+                                        <p></p>
+                                        <button class="upper" id="save" style="width: 100%;"><i class="fa fa-floppy-o  " style="color: #667175; "></i> Save</button>                                       
+                                    </div>
+                                    
+                            </li>
+                        <ul class="list-unstyled chat-list mt-2 mb-0" id="people" >
+                            
+                           
+                            <p></p>
+                            <p style="text-align:center;"><strong>Chats</strong></p>
+                            
+                            
+                            
+                        </ul>
+                    </ul>
+                    
+                        
+                    </div>
+                    <div class="chat" id="chat">
+                        <div class="chat-header clearfix">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <a href="javascript:void(0);" data-toggle="modal" data-target="#view_info">
+                                        <img id="topPfp" src="images/nerdy.png" alt="avatar" style="width: 45px; height: 45px; border-radius: 50%; object-fit: cover;">
+                                    </a>
+                                    <div class="chat-about">
+                                        <h6 class="m-b-0" id="topName">Help Bot</h6>
+                                        <div class="status" id="topBio"> <p> <small> <i class="fa fa-circle online" style="color:#86c541;"></i> Hi! Im here to help you 24/7!</p></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 hidden-sm text-right" id="buttons">
+                                    
+                                    <a href="javascript:closeChat();" class="btn btn-outline-warning" id="exitbtn"><i class="fa fa-arrow-right "></i></a>  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-history">
+                            <ul class="m-b-0" id="messages">
+                                <p style="margin: 0;
+                                
+                                 font-size:25px; color: #b7bec0; text-align: center;">Welcome to snoomz!The best place for finding friends!</p>
+                            </ul>
+                        </div>
+                        <div class="chat-message clearfix">
+                          <div class="input-group" id="input-group">
+                            
+                        </div>
+                        </div>
+                    </div>
+        
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+           
+            <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+            <script src="func.js" type="text/javascript"></script>
+            <script type="module" type="text/javascript">
+        
+                import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
+                import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js";
+                import { getDatabase, ref, set, get, child, onValue, orderByChild, onChildAdded, update } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-database.js";
+                import { getStorage, ref as sRef, uploadBytesResumable, getDownloadURL} from "https://www.gstatic.com/firebasejs/9.1.3/firebase-storage.js";
+            
+                const firebaseConfig = {
+                //put your firebase config here
+              };
+            
+            
+                const app = initializeApp(firebaseConfig);
+                const auth = getAuth(app);
+                const db = getDatabase(app);
+                const dbRef = ref(db);
+                const storage = getStorage(app);
+                
+        
+                document.getElementById("signout").addEventListener("click", function(){
+                    
+                    if(confirm("Are you sure you want to Sign Out?")){
+                        
+                    signOut(auth).then(() => {
+                        location.href = "index.html";
+                        }).catch((error) => {
+                            location.href = "index.html";
+                        });
+                    }
+                        else{
+                            
+                        }
+        
+                })
+                document.getElementById("openId").addEventListener('click', function(){
+            var modal = document.getElementById("edit");
+        
+            if(modal.style.display == "none")
+            {
+                modal.style.display = "block";
+            }
+            else
+            {
+                modal.style.display = "none";
+            }
+        })
+            
+            var files = [];
+        var reader = new FileReader();
+        
+        var myimg1 = document.getElementById("pfp");
+        
+        var UpBtn = document.getElementById("upimg");
+        var saBtn = document.getElementById("save");
+        
+        
+        
+        var input = document.createElement('input');
+        input.type = 'file';
+        
+        input.onchange = e =>{
+          files = e.target.files;
+          
+        
+          var extention = GetExtName(files[0]);
+          var name = GetFileName(files[0]);
+        
+          
+        
+          reader.readAsDataURL(files[0]);
+        }
+        reader.onload = function(){
+          myimg1.src = reader.result;
+          
+        }
+        
+        UpBtn.onclick = function(){
+          input.click();
+        }
+
+        var UpBtn1 = document.getElementById("gPfp");
+        
+        var input1 = document.createElement('input');
+        input1.type = 'file';
+        
+        
+        input1.onchange = e =>{
+          files = e.target.files;
+          
+        
+          var extention = GetExtName(files[0]);
+          var name = GetFileName(files[0]);
+        
+          
+        
+          reader.readAsDataURL(files[0]);
+        }
+    
+        
+        UpBtn1.onclick = function(){
+          input1.click();
+        }
+        
+        function GetExtName(file){
+          var temp = file.name.split('.');
+          var ext = temp.slice(temp.length-1,temp.length);
+          return '.' + ext[0];
+        }
+        
+        function GetFileName(file){
+            var temp = file.name.split('.');
+            var fname = temp.slice(0, -1).join('.');
+            return fname;
+        }
+        
+        
+        
+        
+        
+        
+                onAuthStateChanged(auth, (user) => {
+                    if (user) {
+                        // User is signed in, see docs for a list of available properties
+                        // https://firebase.google.com/docs/reference/js/firebase.User
+                        const uid = user.uid;
+                        const starCountRef = ref(db, 'users/' + uid);
+        
+                        get(starCountRef).then((snapshot) => {
+        
+                            const data = snapshot.val();
+                            document.getElementById("copy").innerHTML = `<strong>${data.uid}</strong>`;
+                            document.getElementById("pfp").src = data.pfp;
+                            document.getElementById("bio").value = data.bio;
+                            document.getElementById("bioView").innerHTML = `<i class="fa fa-circle online" aria-hidden="true"></i> <small> ${data.bio} </small>`;
+                            const fetchPeople = ref(db, 'users/' + uid + "/people/");
+                            const fetchServers = ref(db, 'users/' + uid + "/servers/");
+                            const username = data.uid;
+                            const contact = `<li class="clearfix" onclick="loadPChat('${username}')">
+                                <img src="https://media.istockphoto.com/vectors/chat-icon-vector-sign-and-symbol-isolated-on-white-background-chat-vector-id1001103912?k=20&m=1001103912&s=170667a&w=0&h=7KUgKVheK714AsPDWVw1J5GlBRVzd1XXmDcTgV-Q76o=" alt="avatar" style="width: 45px; height: 45px; border-radius: 50%; object-fit: cover;">
+                                <div class="about">
+                                    <div class="name">Public Chat</div>
+                                    <div class="status"> <i class="fa fa-circle online"></i> Online 24/7. Join now </div>                                            
+                                </div>
+                            </li>
+                                `;
+                        
+                            document.getElementById("people").innerHTML += contact;
+                            onChildAdded(fetchPeople, function (snapshot) {
+                                const user1 = snapshot.val();
+                                const orgUsr = ref(db, "/users/" + user1.id);
+                            get(orgUsr).then((snapshot) => {
+                                
+                                const user = snapshot.val();
+                        if(user.bio.length <= 18){
+                                const contact = `
+                                <li class="clearfix" onclick="loadChat('${user.id}', '${uid}', '${username}')" id="${user.id}">
+                                <img src="${user.pfp}" alt="avatar" style="width: 45px; height: 45px; border-radius: 50%; object-fit: cover;">
+                                <div class="about">
+                                    <div class="name">${user.uid}</div>
+                                    <div class="status"> <i class="fa fa-circle online"></i> <small> ${user.bio} </small> </div>                                            
+                                </div>
+                            </li>`;
+                        
+                            document.getElementById("people").innerHTML += contact;
+                        }
+                        else{
+                            var bio = user.bio;
+                            const contact = `
+                                <li class="clearfix" onclick="loadChat('${user.id}', '${uid}', '${username}')" id="${user.id}">
+                                <img src="${user.pfp}" alt="avatar" style="width: 45px; height: 45px; border-radius: 50%; object-fit: cover;">
+                                <div class="about">
+                                    <div class="name">${user.uid}</div>
+                                    <div class="status"> <i class="fa fa-circle online"></i> <small> ${bio.substring(0, bio.length - 15)}... </small> </div>                                            
+                                </div>
+                            </li>`;
+                        
+                            document.getElementById("people").innerHTML += contact;
+                        }
+                            
+                            });
+          
+                            aScroll();
+                            });
+                            onChildAdded(fetchServers, function (snapshot) {
+                                const server = snapshot.val();
+                                const orgSvr = ref(db, "/servers/" + server.id);
+                            get(orgSvr).then((snapshot) => {
+                                
+                                const user = snapshot.val();
+                        if(user.bio.length <= 18){
+                                const contact = `
+                                <li class="clearfix" onclick="loadSChat('${user.id}', '${uid}', '${username}')" id="${user.id}">
+                                <img src="${user.pfp}" alt="avatar" style="width: 45px; height: 45px; border-radius: 50%; object-fit: cover;">
+                                <div class="about">
+                                    <div class="name">${user.name}</div>
+                                    <div class="status"> <i class="fa fa-circle online"></i> <small> ${user.bio} </small> </div>                                            
+                                </div>
+                            </li>`;
+                        
+                            document.getElementById("people").innerHTML += contact;
+                        }
+                        else{
+                            var bio = user.bio;
+                            const contact = `
+                                <li class="clearfix" onclick="loadSChat('${user.id}', '${uid}', '${username}')" id="${user.id}">
+                                <img src="${user.pfp}" alt="avatar" style="width: 45px; height: 45px; border-radius: 50%; object-fit: cover;">
+                                <div class="about">
+                                    <div class="name">${user.name}</div>
+                                    <div class="status"> <i class="fa fa-circle online"></i> <small> ${bio.substring(0, bio.length - 15)}... </small> </div>                                            
+                                </div>
+                            </li>`;
+                        
+                            document.getElementById("people").innerHTML += contact;
+                        }
+                            
+                            });
+          
+                            aScroll();
+                            });
+                           
+        
+                           
+                            document.getElementById("addButton").addEventListener("click", addPeople);
+                            
+                        //document.getElementById("pvsend-message").addEventListener("click", pvpostChat);
+                        
+                        
+                        function addPeople(){
+                            const inUid = document.getElementById("addId")
+                        if(inUid.value.length < 17){
+                            
+                            var redcolor = "#FF7F7F";
+                            const usersPath = ref(db, 'users/');
+        
+                            onChildAdded(usersPath, function (snapshot){
+                                const user = snapshot.val();
+                                var id = makeid(15);
+                                if(data.uid != user.uid){
+                                if(inUid.value == user.uid)
+                                {
+                                    set(ref(db, '/users/' + uid + "/people/" + user.id), {
+                                        
+                                        uid: user.uid,
+                                        id: user.id,
+                                        cid: id
+                                    });
+                                    set(ref(db, '/users/' + user.id + "/people/" + uid), {
+                                        
+                                        uid: username,
+                                        id: uid,
+                                        cid: id
+                                    });
+                                    set(ref(db, '/channels/' + id), {
+                                        
+                                        cid:id,
+                                        
+                                    });
+                                }
+                                else
+                                {
+                                    
+                                }
+                            }
+                            else
+                                {
+                                    inUid.style.backgroundColor = redcolor;
+                                }
+                            });
+                        }
+                        else
+                        {
+                            var redcolor = "#FF7F7F";
+                            const serversPath = ref(db, 'servers/');
+                            
+        
+                            onChildAdded(serversPath, function (snapshot){
+                                const server = snapshot.val();
+                                
+                               
+                                if(inUid.value == server.uid)
+                                {
+                                    set(ref(db, '/users/' + uid + "/servers/" + server.id), {
+                                        
+                                        
+                                        id: server.id,
+                                        inv: server.uid,
+                                    });
+                                    
+            
+                                
+                            }
+                            else
+                                {
+                                    inUid.style.backgroundColor = redcolor;
+                                }
+                            });
+                        }
+                        }
+                        
+        
+                        document.getElementById("save").addEventListener("click", function(){
+                            document.getElementById("loading").style.display = "block";
+                            document.getElementById("mainContent").style.display = "none";
+                            loading();
+                            
+                            update(ref(db, 'users/' + uid), {
+                            bio: document.getElementById("bio").value,
+                            
+                        });
+                        get(starCountRef).then((snapshot) => {
+                            const data = snapshot.val();
+                        document.getElementById("bioView").innerHTML = `<i class="fa fa-circle online" aria-hidden="true"></i> <small> ${data.bio} </small>`;
+                        
+                    });
+                        var ImgToUpload = files[0];
+        
+                  
+        
+                  const metaData = {
+                    contentType: ImgToUpload.type
+                  }
+                  const storage = getStorage();
+        
+                  const storageRef = sRef(storage, "users/" + uid + "/profileImg/" + makeid(20))
+        
+                  const UploadTask = uploadBytesResumable(storageRef, ImgToUpload, metaData);
+        
+                  UploadTask.on('state-changed', (snapshot)=>{
+                    
+                  },
+                  (error) =>{
+                    alert("Image not uploaded!")
+                  },
+                  () => {
+                    getDownloadURL(UploadTask.snapshot.ref).then((downloadURL)=>{
+                    
+                      update(ref(db, '/users/' + uid), {
+                      
+                      pfp : downloadURL
+                  });
+              
+                  location.reload();
+                  
+                    });
+                  });
+                  
+                  
+        
+                
+                        })
+                        document.getElementById("createGroup").addEventListener("click", function(){
+                            document.getElementById("loading").style.display = "block";
+                            document.getElementById("mainContent").style.display = "none";
+                            const serverid = makeid(50);
+                            const inv = "invitation#" + makeid(6);
+                            loading();
+                           
+                        var ImgToUpload = files[0];
+        
+                  
+        
+                  const metaData = {
+                    contentType: ImgToUpload.type
+                  }
+                  const storage = getStorage();
+        
+                  const storageRef = sRef(storage, "servers/" + serverid + "/profileImg/" + makeid(20))
+        
+                  const UploadTask = uploadBytesResumable(storageRef, ImgToUpload, metaData);
+        
+                  UploadTask.on('state-changed', (snapshot)=>{
+                    
+                  },
+                  (error) =>{
+                    alert("Image not uploaded!")
+                  },
+                  () => {
+                    getDownloadURL(UploadTask.snapshot.ref).then((downloadURL)=>{
+                    
+                      set(ref(db, '/servers/' + serverid), {
+                      uid: inv,
+                      id: serverid,
+                      bio: document.getElementById("gBio").value,
+                      pfp : downloadURL,
+                      name: document.getElementById("gName").value
+                  });
+                  set(ref(db, '/users/' + uid + "/servers/" + serverid), {
+                      
+                      id: serverid,
+                      inv: inv
+                  });
+              
+                 location.reload();
+                  
+                    });
+                   
+                  });
+                  
+                  
+        
+                
+                        })//mark of ending
+        
+                            
+                            });
+        
+                    } else {
+                        location.href = "index.html";
+                    }
+                    });
+        
+        
+                                             
+                       
+            </script>
+          </body>
+</html>
