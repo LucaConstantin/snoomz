@@ -34,12 +34,12 @@ Uses Firebase version 9 and 8.
 
 ## Table of Contents 📚
 
-- [Features](#features 📗)
-- [Installation](#installation 📒)
-- [Demo](#demo 📕)
-- [License](#license 📙)
+- [Features](#features) 📗
+- [Installation](#installation) 📒
+- [Demo](#demo) 📕
+- [License](#license) 📙
 
-## Features 📗
+## Features
 
 1. Loging in / Creating an account
 2. Adding people to chat
@@ -51,7 +51,7 @@ Uses Firebase version 9 and 8.
 8. Adding people to your group
 9. Leaving Groups
 
-## Installation 📒
+## Installation
 
 1. Create a Firebase account
 2. Put your Firebase Config (which you can get from your account settings) here.
@@ -65,10 +65,10 @@ const firebaseConfig = {
 You have to do the same thing for the following files: func.js, index.html, pb.html
  
 
-## Demo 📕
+## Demo
 
 https://snoomz.netlify.app/
 
-## License 📙
+## License
 
 You are free to do anything with the source code of this project!
