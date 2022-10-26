@@ -24,6 +24,8 @@ A chatting app made with Html, Css, Javascript and Firebase.
 
 Uses Firebase version 9 and 8.
 
+⚠️ DISCLAIMER: This is an older project of mine with a very bad written code. I will soon optimize and clean it. ⚠️
+
 <br>
 <div align="center">
 <img alt="screenshot" src="https://lucaconstantin.com/images/work-2.jpg">
@@ -47,6 +49,7 @@ Uses Firebase version 9 and 8.
 6. A global chat
 7. Editting you profile/group
 8. Adding people to your group
+9. Leaving Groups
 
 ## Installation 📒
 
