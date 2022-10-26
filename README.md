@@ -1,11 +1,11 @@
 
 <br>
 <div align="center">
-<img width="150" alt="logotype" src="https://snoomz.netlify.app/images/logo.jpg">
+<img width="150" style="border-radius:50%" alt="logotype" src="https://snoomz.netlify.app/images/logo.jpg">
 </div>
 <br>
 
-# Snoomz
+# Snoomz Chatting App
 
 A chatting app made with Html, Css, Javascript and Firebase.
 
