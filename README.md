@@ -22,6 +22,12 @@ A chatting app made with Html, Css, Javascript and Firebase.
 
 Uses Firebase version 9 and 8.
 
+<br>
+<div align="center">
+<img alt="screenshot" src="https://lucaconstantin.com/images/work-2.jpg">
+</div>
+<br>
+
 ## Table of Contents
 
 - [Features](#features)
