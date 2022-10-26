@@ -34,10 +34,10 @@ Uses Firebase version 9 and 8.
 
 ## Table of Contents 📚
 
-- [Features](#features)
-- [Installation](#installation)
-- [Demo](#demo)
-- [License](#license)
+- [Features](#features 📗)
+- [Installation](#installation 📒)
+- [Demo](#demo 📕)
+- [License](#license 📙)
 
 ## Features 📗
 
