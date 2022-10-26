@@ -16,7 +16,7 @@
   
 </div>
 
-# Snoomz Chatting App
+# About Snoomz
 
 A chatting app made with Html, Css, Javascript and Firebase.
 
