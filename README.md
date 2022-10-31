@@ -71,4 +71,4 @@ https://snoomz.netlify.app/
 
 ## License
 
-You are free to do anything with the source code of this project!
+MIT License
