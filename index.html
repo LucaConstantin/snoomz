@@ -20,7 +20,7 @@
                     <div class="text_signup">
                         <h4>Start your journey</h4>
                         <h2>Sign up to Snoomz.</h2>
-                        <p>Already have an account <a href="#" class="signin-click">Sign In</a></p>
+                        <p>Already have an account <a href="#" class="signin-click"> Sign In</a></p>
                         
                     </div>
                     
@@ -31,10 +31,10 @@
                 
                     
                 </div>
-                <div class="image-box"> <img src="images/login.jpg" style=" background-color: rgb(300, 300, 300); "> </div>
+                <div class="image-box"> <img src="images/sign-up.jpg" style=" background-color: rgb(300, 300, 300); "> </div>
             </div>
             <div class="user signin_form">
-                <div class="image-box"> <img src="images/loginimage.jpg" style=" background-color: rgb(300, 300, 300); "> </div>
+                <div class="image-box"> <img src="images/login.jpg" style=" background-color: rgb(300, 300, 300); "> </div>
                 <div class="form">
                     <div class="flag-text"> <select>
                             <option>English</option>
@@ -43,7 +43,7 @@
                     <div class="text_signup">
                         <h4>Authenticate now!</h4>
                         <h2>Sign in to Snoomz</h2>
-                        <p>Don't have an account?<a href="#" class="signup-click">Sign Up</a></p>
+                        <p>Don't have an account?<a href="#" class="signup-click"> Sign Up</a></p>
                     </div>
                     
                     <div class="input-text-signup"> <input type="text" required id="signEmail"> <i class="fa fa-envelope-o"></i> <label>E-mail</label> </div>
@@ -69,6 +69,7 @@
   };
 
 
+    //firebase constants
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
     const db = getDatabase(app);
@@ -88,6 +89,7 @@
                 }
                 });
 
+    //used for creating user
     function createUsr() {
         const email = document.getElementById("email").value;
         const password = document.getElementById("password_input").value;
@@ -179,6 +181,8 @@
             });
 
     }
+
+    //used for signing in user
     function signUsr()
     {
         const email = document.getElementById("signEmail").value;
@@ -211,6 +215,7 @@
 
     }
 
+    //used for generating id
     function makeid(length) {
             var result           = '';
             var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';

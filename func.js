@@ -270,7 +270,7 @@ function loadSChat(uid, usrid, usr){
             <p id="inv" onclick="copyEvent('inv')"><strong>${ch.inv}</strong></p>
             <a href="javascript:exitServer('${usrid}','${uid}', '${username}');" class="btn btn-outline-info" id="closeDM"><i class="fa fa-window-close-o"></i></a>
             <a href="javascript:help();" class="btn btn-outline-warning"><i class="fa fa-question"></i></a>
-            <a href="javascript:closeChat();" class="btn btn-outline-warning" id="exitbtn"><i class="fa fa-arrow-right "></i></a>`//TO DO: ADD TYHE BUTTONS TO THE UPPER BUTTONS PART AT CHAT.      
+            <a href="javascript:closeChat();" class="btn btn-outline-warning" id="exitbtn"><i class="fa fa-arrow-right "></i></a>`//TO DO: ADD THE BUTTONS TO THE UPPER BUTTONS PART AT CHAT.      
     
     
             document.getElementById("input-group").innerHTML = input;
@@ -334,7 +334,7 @@ function loadPChat(usr){
                                 const buttons =  `
         
         <a href="javascript:help();" class="btn btn-outline-warning"><i class="fa fa-question"></i></a>
-        <a href="javascript:closeChat();" class="btn btn-outline-warning" id="exitbtn"><i class="fa fa-arrow-right "></i></a>`//TO DO: ADD TYHE BUTTONS TO THE UPPER BUTTONS PART AT CHAT.      
+        <a href="javascript:closeChat();" class="btn btn-outline-warning" id="exitbtn"><i class="fa fa-arrow-right "></i></a>`//TO DO: ADD THE BUTTONS TO THE UPPER BUTTONS PART AT CHAT.      
 
 
        
@@ -388,7 +388,7 @@ function loadPChat(usr){
                                 const buttons =  `
         
         <a href="javascript:help();" class="btn btn-outline-warning"><i class="fa fa-question"></i></a>
-        <a href="javascript:closeChat();" class="btn btn-outline-warning" id="exitbtn"><i class="fa fa-arrow-right "></i></a>`//TO DO: ADD TYHE BUTTONS TO THE UPPER BUTTONS PART AT CHAT.      
+        <a href="javascript:closeChat();" class="btn btn-outline-warning" id="exitbtn"><i class="fa fa-arrow-right "></i></a>`//TO DO: ADD THE BUTTONS TO THE UPPER BUTTONS PART AT CHAT.      
 
 
        
