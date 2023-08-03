@@ -27,10 +27,6 @@ Uses Firebase version 9 and 8.
 ⚠️ DISCLAIMER: This is an old project of mine with a very bad written code. I will soon optimize and clean it. ⚠️
 
 <br>
-<div align="center">
-<img alt="screenshot" src="https://lucaconstantin.com/images/work-2.jpg">
-</div>
-<br>
 
 ## Table of Contents 
 
